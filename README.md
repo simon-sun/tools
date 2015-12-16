@@ -1,7 +1,2 @@
-# hello_word
-一个githup项目
-test add frist!
-this is one new githup.
-dddddddd
-只是测试用的
-是多少
+# tools
+主要有关一些工具的使用
