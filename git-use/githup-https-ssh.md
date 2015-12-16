@@ -70,13 +70,14 @@ Hi username! You've successfully authenticated, but GitHub does not
 如果用户名是正确的,你已经成功设置SSH密钥。如果你看到 “access denied” ，者表示拒绝访问，那么你就需要使用 https 去访问，而不是 SSH 。
 
 
+# 重点
+
 git config --global user.email "YOUR EMAIL ADDRESS"  使用者的用户名
 git config --global user.name "YOUR NAME"  使用者的邮箱
 
 总结：
 使用https要每次输入用户名和密码
 使用ssh直接可以git pull
-
 
 
 使用ssh：
