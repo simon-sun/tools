@@ -9,6 +9,9 @@ npm install -g fis3 fis-optimizer-html-minifier fis3-deploy-replace
 
 执行
 
+使用命令
+fis3 release -f ${WEBXPAPP}/fis-conf.js
+
 ### 项目家目录的fis-conf.js   实现压缩的项目目录
 var WEBPATH = '/usr/local/httpd/htdocs/dev_pfedu_web_xp/app/';
 
