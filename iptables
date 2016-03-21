@@ -19,5 +19,16 @@
 COMMIT
 # Completed on Mon Mar 21 16:33:02 2016
 
-网址：http://fp-moon.iteye.com/blog/2075707
-网址：http://www.111cn.net/sys/CentOS/55776.htm
+#网址：http://fp-moon.iteye.com/blog/2075707
+#网址：http://www.111cn.net/sys/CentOS/55776.htm
+# 增加 
+# iptables -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
+# 查询当前的预状态
+# service iptables status
+# 保存
+# service iptables save
+# 重启
+# service iptables reload
+# 查看到每个规则chain的序列号
+# iptables -L -n --line-number
+# iptables -D INPUT 序列号
