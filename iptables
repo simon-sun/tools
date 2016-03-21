@@ -32,4 +32,4 @@ COMMIT
 # 查看到每个规则chain的序列号
 # iptables -L -n --line-number
 # 删除
-# iptables -D INPUT 序列号
+# iptables -D INPUT 序列号 或 iptables -D FORWARD 序列号
