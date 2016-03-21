@@ -31,4 +31,5 @@ COMMIT
 # service iptables reload
 # 查看到每个规则chain的序列号
 # iptables -L -n --line-number
+# 删除
 # iptables -D INPUT 序列号
