@@ -3,14 +3,18 @@
 :INPUT ACCEPT [4:216]
 :FORWARD ACCEPT [0:0]
 :OUTPUT ACCEPT [419:57706]
+# 允许已建立的或相关连的通行
 -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 443 -j ACCEPT
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 3690 -j ACCEPT
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 8000 -j ACCEPT
 -A INPUT -p tcp -m state --state NEW -m tcp --dport 22 -j ACCEPT
+# 每秒中最多允许15个新连接 
 -A FORWARD -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK SYN -m limit --limit 1/sec --limit-burst 15 -j ACCEPT
+# 防止各种端口扫描
 -A FORWARD -p tcp -m tcp --tcp-flags FIN,SYN,RST,ACK RST -m limit --limit 1/sec -j ACCEPT
+# Ping洪水攻击
 -A FORWARD -p icmp -m icmp --icmp-type 8 -m limit --limit 1/sec -j ACCEPT
 COMMIT
 # Completed on Mon Mar 21 16:33:02 2016
