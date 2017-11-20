@@ -14,6 +14,7 @@
   /sbin/service crond stop //关闭服务<br/>
   /sbin/service crond restart //重启服务<br/>
   /sbin/service crond reload //重新载入配置<br/>
+  tail -f /var/log/cron 查看心跳<br/>
 6，crontab参考网址：<br/>
 http://www.linuxidc.com/Linux/2015-01/112054.htm<br/>
 https://www.cnblogs.com/Gbeniot/p/5421371.html<br/>
