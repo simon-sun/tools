@@ -6,4 +6,4 @@
   /sbin/service crond stop //关闭服务<br/>
   /sbin/service crond restart //重启服务<br/>
   /sbin/service crond reload //重新载入配置<br/>
-5，crontab参考网址：http://www.linuxidc.com/Linux/2015-01/112054.htm <br/>
+5，crontab参考网址：http://www.linuxidc.com/Linux/2015-01/112054.htm和https://www.cnblogs.com/Gbeniot/p/5421371.html<br/>
