@@ -1,3 +1,4 @@
+
 #!/bin/bash
 #执行方法：*/3 * * * *  /data/timer/ncports.sh
 
@@ -17,10 +18,13 @@ do
   nc -w 10 -z $line > /dev/null 2>&1
   if [ $? -eq 0 ]
   then
-      echo "date:"`date "+%G-%m-%d %H:%M:%S"`, "server:"$line:ok >> $PORTSSUCCESS
+#       echo "date:"`date "+%G-%m-%d %H:%M:%S"`" server:"$line":ok"
+        echo "date:"`date "+%G-%m-%d %H:%M:%S"`" server:"$line":ok" >> $PORTSSUCCESS
   else
-      echo "nczookeeper:"`bash ${TIMERHOME}zookeeper-3.3.6/bin/zkServer.sh start` >> $PORTSRELOAD
-      echo "date:"`date "+%G-%m-%d %H:%M:%S"`, "server:"$line:fail >> $PORTSRELOAD
+      echo "nczookeeper:"`bash ${SOFTWARE}zookeeper-3.3.6/bin/zkServer.sh start` >> $PORTSRELOAD
+#      echo "date:"`date "+%G-%m-%d %H:%M:%S"`" server:"$line":fail"
+      echo "date:"`date "+%G-%m-%d %H:%M:%S"`" server:"$line":fail" >> $PORTSRELOAD
   fi
 done
 exit 0
+
