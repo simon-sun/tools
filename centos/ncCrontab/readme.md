@@ -3,6 +3,7 @@
    http://blog.csdn.net/yjh314/article/details/52209438<br/>
    http://blog.csdn.net/fym0121/article/details/8190078<br/>
    http://blog.csdn.net/juexin840/article/details/67635080<br/>
+   http://blog.csdn.net/Shreck66/article/details/48103017<br/>
 3，目前使用nc监控数据，完成软件挂了，重新启动功能，使用到nc和crontab服务<br/>
 4，crontab -e 编辑，crontab -l 查看列表<br/>
   /sbin/service crond start //启动服务<br/>
